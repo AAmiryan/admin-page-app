@@ -1,0 +1,25 @@
+.mainContainer {
+  display: flex;
+}
+
+.menuBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuBlock a {
+  color: #0d151c;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.adminPage {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  margin: 16px 145px 29px 26px;
+}
