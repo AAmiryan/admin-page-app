@@ -10,7 +10,7 @@ const MainPage = () => {
   return (
     <div className="mainContainer">
       <div className="menuBlock">
-        <div className="adminPage">Admin page</div>
+        <p className="adminPage">Admin page</p>
         <Link to="/" className="link">
           Dashboard
         </Link>
