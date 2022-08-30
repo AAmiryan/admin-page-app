@@ -1,28 +1,45 @@
 import React from "react";
+import { Table } from "antd";
+
+import "./Table.css"
 
 const DashboardTable = () => {
+    const columns = [
+        {
+          title: "Name",
+          dataIndex: "name"
+        },
+        {
+          title: "Age",
+          dataIndex: "age"
+        },
+       
+      ];
+      const data = [
+        {
+          key: "1",
+          name: "John Brown",
+          age: 32,
+          address: "New York No. 1 Lake Park"
+        },
+        {
+          key: "2",
+          name: "Jim Green",
+          age: 42,
+          address: "London No. 1 Lake Park"
+        },
+      ];
   return (
     <div>
-      <div>Visits by Location</div>
+      <div className="tableTitle">Visits by Location</div>
       <div>
-        <table>
-          <tr>
-            <td>dsfavsdav</td>
-            <td>wev</td>
-          </tr>
-          <tr>
-            <td>dsfavsdav</td>
-            <td>wev</td>
-          </tr>
-          <tr>
-            <td>dsfavsdav</td>
-            <td>wev</td>
-          </tr>
-          <tr>
-            <td>dsfavsdav</td>
-            <td>wev</td>
-          </tr>
-        </table>
+      <Table
+      columns={columns}
+      dataSource={data}
+      size="middle"
+      showHeader={false}
+      pagination={false}
+    />
       </div>
     </div>
   );
