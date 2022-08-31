@@ -1,0 +1,12 @@
+.graphDirectory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px 20px 0;
+}
+
+.graphDirectory div p {
+  margin: 0px 0px 0px 8px;
+}
+

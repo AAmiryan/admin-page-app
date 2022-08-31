@@ -1,0 +1,22 @@
+.managementHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 16px 0px 20px 0;
+  flex-direction: row;
+}
+
+.managementHeader button {
+    margin-right: 40px;
+}
+
+.managementHeader div p {
+    margin: 0px 0px 0px 8px;
+}
+
+.adminIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+

@@ -1,0 +1,24 @@
+tr.drop-over-downward td {
+  border-bottom: 2px dashed #1890ff;
+}
+
+tr.drop-over-upward td {
+  border-top: 2px dashed #1890ff;
+}
+
+.onlineTableSwitch {
+  background-color: #20c012;
+}
+
+.ant-table-tbody tr td{
+  padding: 15px 40px !important;
+}
+
+.ant-table-thead tr th{
+  padding: 15px 40px !important;
+  color: #385BE8 !important;
+}
+
+.tableComponent{
+  margin: 40px 20px;
+}

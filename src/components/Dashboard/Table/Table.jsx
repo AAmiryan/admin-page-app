@@ -1,45 +1,59 @@
 import React from "react";
 import { Table } from "antd";
 
-import "./Table.css"
+import "./Table.css";
 
 const DashboardTable = () => {
-    const columns = [
-        {
-          title: "Name",
-          dataIndex: "name"
-        },
-        {
-          title: "Age",
-          dataIndex: "age"
-        },
-       
-      ];
-      const data = [
-        {
-          key: "1",
-          name: "John Brown",
-          age: 32,
-          address: "New York No. 1 Lake Park"
-        },
-        {
-          key: "2",
-          name: "Jim Green",
-          age: 42,
-          address: "London No. 1 Lake Park"
-        },
-      ];
+  const columns = [
+    {
+      title: "Country",
+      dataIndex: "country",
+    },
+    {
+      title: "Percent",
+      dataIndex: "percent",
+    },
+  ];
+  const data = [
+    {
+      key: "1",
+      country: "Yerevan, Armenia",
+      percent: "20%",
+    },
+    {
+      key: "2",
+      country: "Yerevan, Armenia",
+      percent: "20%",
+    },
+    {
+      key: "3",
+      country: "Yerevan, Armenia",
+      percent: "20%",
+    },
+    {
+      key: "4",
+      country: "Yerevan, Armenia",
+      percent: "20%",
+    },
+    {
+      key: "5",
+      country: "Yerevan, Armenia",
+      percent: "20%",
+    },
+    
+  ];
   return (
     <div>
       <div className="tableTitle">Visits by Location</div>
       <div>
-      <Table
-      columns={columns}
-      dataSource={data}
-      size="middle"
-      showHeader={false}
-      pagination={false}
-    />
+        <Table
+          className={data.length <= 5 ? "table" : "tableScroll"}
+          columns={columns}
+          dataSource={data}
+          size="middle"
+          showHeader={false}
+          pagination={false}
+        />
       </div>
     </div>
   );

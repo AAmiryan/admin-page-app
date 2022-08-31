@@ -1,0 +1,25 @@
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3 1 1 1;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.ant-select-selector {
+  border: none !important;
+  background-color: #f8f8fa !important;
+  border-radius: 5px !important;
+}
+
+.ant-select-arrow {
+  color: #3e64ff;
+}
+
+.filtersAutoComplete {
+  margin-right: 100px !important;
+}
+
+.selectAutoComplete {
+  margin-right: 40px !important;
+}
