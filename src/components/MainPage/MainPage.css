@@ -12,7 +12,7 @@
 }
 
 .menuBlock a {
-  color: #384046;
+  color: #63676A;
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
@@ -25,6 +25,7 @@
   background-color: #D6EBFE;
   padding: 16px 50px;
   border-radius: 5px;
+  color: #0D151C;
 }
 
 .adminPage {
@@ -32,6 +33,6 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  margin: 16px 107px 29px 26px;
+  margin: 16px 110px 29px 9px;
   color: #0D151C;
 }

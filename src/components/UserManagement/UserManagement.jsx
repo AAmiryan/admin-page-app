@@ -3,17 +3,18 @@ import React from "react";
 import AdminIcon from "../../svgComponents/AdminIcon";
 import TableComponent from "../Table/Table";
 import Filters from "../Filters/Filters";
+import { data, columns } from "./data";
 
 import "./UserManagement.css";
 
 const UserManagement = () => {
   return (
-    <div>
+    <div className="userManagementContainer">
       <div className="managementHeader">
         <Button type="primary" shape="round" size="large">
           Add Users
         </Button>
-        <Button type="primary" shape="round" size="large">
+        <Button type="primary" shape="round" size="large" className="exportButton">
           Export CSV
         </Button>
         <div className="adminIcon">
@@ -25,7 +26,7 @@ const UserManagement = () => {
         <Filters />
       </div>
       <div className="managementTable">
-        <TableComponent />
+        <TableComponent data={data} columns={columns(true)} />
       </div>
     </div>
   );

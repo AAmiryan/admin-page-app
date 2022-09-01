@@ -10,7 +10,7 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="dashboardContainer">
       <div className="dashboardHeader">
         <AdminIcon />
         <p>Admin</p>

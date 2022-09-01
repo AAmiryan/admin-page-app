@@ -2,6 +2,7 @@ import React from "react";
 import Filters from "../Filters/Filters";
 import TableComponent from "../Table/Table";
 import AdminIcon from "../../svgComponents/AdminIcon";
+import { data, columns } from "./data";
 
 import "./GraphDirectory.css";
 
@@ -12,7 +13,6 @@ const GraphDirectory = () => {
         <div>
           <Filters />
         </div>
-        
 
         <div className="adminIcon">
           <AdminIcon />
@@ -20,7 +20,7 @@ const GraphDirectory = () => {
         </div>
       </div>
       <div className="graphDirectoryTable">
-        <TableComponent />
+        <TableComponent data={data} columns={columns} />
       </div>
     </div>
   );

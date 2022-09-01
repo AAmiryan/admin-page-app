@@ -1,9 +1,14 @@
+.graphDirectoryContainer{
+  width: 84%;
+  margin-right: 20px;
+}
+
 .graphDirectory {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 0px 20px 0;
+  margin: 16px 20px 20px 0;
 }
 
 .graphDirectory div p {

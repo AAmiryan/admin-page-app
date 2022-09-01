@@ -1,7 +1,6 @@
 .filterContainer {
   display: flex;
   flex-direction: row;
-  flex-grow: 3 1 1 1;
   justify-content: flex-start;
   margin-left: 20px;
 }
@@ -13,13 +12,27 @@
 }
 
 .ant-select-arrow {
-  color: #3e64ff;
+  color: #3e64ff !important;
 }
 
 .filtersAutoComplete {
   margin-right: 100px !important;
 }
 
-.selectAutoComplete {
+.filtersSelect {
   margin-right: 40px !important;
+}
+
+.ant-input {
+  width: 60% !important;
+  background-color: #f8f8fa !important;
+  margin-right: 40px !important;
+  border-radius: 5px !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
