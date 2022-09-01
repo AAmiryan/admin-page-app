@@ -21,9 +21,9 @@
   margin-top: 30px ;
 }
 
-.menuBlock a:active{
+.menuBlock a:focus{
   background-color: #D6EBFE;
-  padding: 16px 50px;
+  padding: 10px 30px;
   border-radius: 5px;
   color: #0D151C;
 }

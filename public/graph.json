@@ -1,0 +1,14 @@
+{
+  "graphs": [
+    {
+      "id": "25",
+      "graphName": "Leanne",
+      "nodesCount": "20",
+      "linksCount": "20",
+      "creator": "Leanne Graham",
+      "sharesCount": "50",
+      "attachmentNumber": "200"
+    }
+  ],
+  "userId": "1000"
+}

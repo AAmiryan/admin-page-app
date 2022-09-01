@@ -1,3 +1,4 @@
+import AdminIcon from "../../svgComponents/AdminIcon";
 import MultipointSvg from "../../svgComponents/Multipoint";
 
 export const data = [
@@ -27,7 +28,9 @@ export const data = [
   export const columns = [
     {
       title: "Imag",
-      dataIndex: "image",
+      render: () => (
+        <AdminIcon/>
+        ),
     },
     {
       title: "Name",

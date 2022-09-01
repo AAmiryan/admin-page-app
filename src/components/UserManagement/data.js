@@ -1,34 +1,11 @@
 import { Switch } from "antd";
 import MultipointSvg from "../../svgComponents/Multipoint";
-
-export const data = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-    country: "Yerevan",
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    country: "Yerevan",
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
-    country: "Yerevan",
-  },
-];
+import AdminIcon from "../../svgComponents/AdminIcon";
 
 export const columns = (checked) => [
   {
     title: "Imag",
-    dataIndex: "image",
+    render: () => <AdminIcon />,
   },
   {
     title: "Name",
@@ -36,23 +13,23 @@ export const columns = (checked) => [
   },
   {
     title: "E-mail",
-    dataIndex: "age",
+    dataIndex: "email",
   },
   {
     title: "Member Since",
-    dataIndex: "address",
+    dataIndex: "member",
   },
   {
     title: "Last Log in",
-    dataIndex: "country",
+    dataIndex: "lastLogin",
   },
   {
     title: "Graph Numbers",
-    dataIndex: "country",
+    dataIndex: "graphsCount",
   },
   {
     title: "Current Status",
-    dataIndex: "country",
+    dataIndex: "userStatus",
   },
   {
     title: "Status",

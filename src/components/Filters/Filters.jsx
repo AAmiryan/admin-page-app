@@ -15,7 +15,6 @@ const Filters = () => {
   const [options, setOptions] = useState([]);
 
   let path = window.location.pathname;
-  console.log(path);
 
   const onSearch = (searchText) => {
     console.log("on search");

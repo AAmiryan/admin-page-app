@@ -7,7 +7,7 @@ const MainPage = () => {
     <div className="mainContainer">
       <div className="menuBlock">
         <p className="adminPage">Admin page</p>
-        <Link to="/" className="link">
+        <Link to="/" className="link" >
           Dashboard
         </Link>
         <Link to="/user-management">UserManagement</Link>
