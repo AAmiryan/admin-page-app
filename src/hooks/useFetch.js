@@ -7,14 +7,13 @@ export const useFetch = (path) => {
     onError: null,
   });
 
-  console.log(path);
-
   const getData = useCallback(async () => {
     setData({ isLoading: true });
     try {
       let response = await fetch(path);
       let responseData = await response.json();
-      setData({ isLoading: false, data: responseData });
+      let mapData = responseData.map((el, i) => ({key: el.id, ...el}))
+      setData({ isLoading: false, data: mapData });
     } catch (err) {
       setData({ isLoading: false, onError: err });
       throw Error(err.message);

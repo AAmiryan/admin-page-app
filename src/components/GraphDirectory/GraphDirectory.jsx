@@ -2,11 +2,16 @@ import React from "react";
 import Filters from "../Filters/Filters";
 import TableComponent from "../Table/Table";
 import AdminIcon from "../../svgComponents/AdminIcon";
-import { data, columns } from "./data";
+import { columns } from "./data";
+import { useFetch } from "../../hooks/useFetch";
+
 
 import "./GraphDirectory.css";
 
 const GraphDirectory = () => {
+
+  const { data } = useFetch("/graph.json");
+
   return (
     <div className="graphDirectoryContainer">
       <div className="graphDirectory">

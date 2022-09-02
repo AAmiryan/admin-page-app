@@ -60,7 +60,7 @@
     "id": "6"
   },
   {
-    "name": "Kurtis Weissnat",
+    "name": "Kurtis",
     "email": "Telly.Hoeger@billy.biz",
     "member": "01.02.20",
     "lastLogin": "01.02.20",
@@ -216,7 +216,7 @@
     "lastLogin": "01.02.20",
     "graphsCount": "30",
     "userStatus": "offline",
-    "status": "false",
+    "status": "true",
     "id": "23"
   }
 ]

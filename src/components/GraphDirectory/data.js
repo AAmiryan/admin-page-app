@@ -1,68 +1,44 @@
 import AdminIcon from "../../svgComponents/AdminIcon";
 import MultipointSvg from "../../svgComponents/Multipoint";
 
-export const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
-      country: "Yerevan",
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      address: "London No. 1 Lake Park",
-      country: "Yerevan",
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      address: "Sidney No. 1 Lake Park",
-      country: "Yerevan",
-    },
-  ];
+import "./GraphDirectory.css"
 
-  export const columns = [
-    {
-      title: "Imag",
-      render: () => (
-        <AdminIcon/>
-        ),
-    },
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Nodes number",
-      dataIndex: "age",
-    },
-    {
-      title: "Links number",
-      dataIndex: "address",
-    },
-    {
-      title: "Created by",
-      dataIndex: "country",
-    },
-    {
-      title: "Shared with",
-      dataIndex: "country",
-    },
-    {
-      title: "Number of attachment",
-      dataIndex: "country",
-    },
-    {
-      title: "",
-      render: () => (
-        <div onClick={() => console.log("Graph directory")}>
-          <MultipointSvg />
-        </div>
-      ),
-    },
-  ];
-  
+export const columns = [
+  {
+    title: "Name",
+    render: (el) => (
+      <div className="name">
+        <div><AdminIcon /></div>
+        <div>{el.graphName}</div>
+      </div>
+    ),
+  },
+  {
+    title: "Nodes number",
+    dataIndex: "nodesCount",
+  },
+  {
+    title: "Links number",
+    dataIndex: "linksCount",
+  },
+  {
+    title: "Created by",
+    dataIndex: "creator",
+  },
+  {
+    title: "Shared with",
+    dataIndex: "sharesCount",
+  },
+  {
+    title: "Number of attachment",
+    dataIndex: "attachmentNumber",
+  },
+  {
+    title: "",
+    render: () => (
+      <div onClick={() => console.log("Graph directory")}>
+        <MultipointSvg />
+      </div>
+    ),
+  },
+];

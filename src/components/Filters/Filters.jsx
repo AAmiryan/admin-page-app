@@ -1,6 +1,5 @@
 import { AutoComplete, Button, Input, Select } from "antd";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import SearchSvg from "../../svgComponents/Search";
 
 import "./Filters.css";

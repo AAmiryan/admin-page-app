@@ -1,8 +1,14 @@
-import { Switch } from "antd";
+import { Popover, Switch } from "antd";
 import MultipointSvg from "../../svgComponents/Multipoint";
 import AdminIcon from "../../svgComponents/AdminIcon";
 
-export const columns = (checked) => [
+export const columns = (
+  userData,
+  visible,
+  setVisible,
+  hide,
+  handleVisibleChange
+) => [
   {
     title: "Imag",
     render: () => <AdminIcon />,
@@ -18,6 +24,7 @@ export const columns = (checked) => [
   {
     title: "Member Since",
     dataIndex: "member",
+    
   },
   {
     title: "Last Log in",
@@ -29,25 +36,43 @@ export const columns = (checked) => [
   },
   {
     title: "Current Status",
-    dataIndex: "userStatus",
+    render: (el) => (
+      <span
+        style={
+          el.userStatus === "online"
+            ? { color: "#20C012" }
+            : { color: "#86A9C8" }
+        }
+      >
+        {el.userStatus}
+      </span>
+    ),
   },
   {
     title: "Status",
-    render: () => (
+    render: (el) => (
       <Switch
-        defaultChecked
         onChange={(e) => console.log(e)}
         className="onlineTableSwitch"
-        checked={checked}
+        defaultChecked={el.status === "true" ? true : false}
       />
     ),
   },
   {
     title: "",
-    render: () => (
-      <div onClick={() => console.log("User Management")}>
-        <MultipointSvg />
-      </div>
-    ),
+    render: (_, record) => {
+      return (
+      <Popover
+        content={<span onClick={hide}>Close</span>}
+        title="Title"
+        trigger="click"
+        visible={visible}
+        onVisibleChange={handleVisibleChange}
+      >
+        <div onClick={() => console.log("User Management")}>
+          <MultipointSvg />
+        </div>
+      </Popover>
+    )},
   },
 ];
