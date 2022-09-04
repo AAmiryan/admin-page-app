@@ -1,14 +1,15 @@
 .mainContainer {
   display: flex;
+  background-color: #F9F9F9;
 }
 
 .menuBlock {
   display: flex;
   flex-direction: column;
-  background-color: #F9F9F9;
+  
   align-items: center;
   height: 100vh;
-
+  width: 240px;
 }
 
 .menuBlock a {
@@ -33,6 +34,12 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  margin: 16px 110px 29px 9px;
+  margin: 16px 10px 29px 9px;
   color: #0D151C;
+}
+
+.adminPageContainer{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
 }

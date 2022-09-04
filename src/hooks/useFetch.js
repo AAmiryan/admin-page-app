@@ -1,18 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 
-export const useFetch = (path) => {
-  const [data, setData] = useState({
-    isLoading: false,
-    data: null,
-    onError: null,
-  });
+export const useFetch = (path, data, setData) => {
 
   const getData = useCallback(async () => {
     setData({ isLoading: true });
     try {
       let response = await fetch(path);
       let responseData = await response.json();
-      let mapData = responseData.map((el, i) => ({key: el.id, ...el}))
+      let mapData = responseData.map((el, i) => ({ key: el.id, ...el }));
       setData({ isLoading: false, data: mapData });
     } catch (err) {
       setData({ isLoading: false, onError: err });

@@ -10,12 +10,7 @@ tr.drop-over-upward td {
   background-color: #20c012;
 }
 
-.ant-table-tbody tr td{
-  padding: 15px 40px !important;
-}
-
 .ant-table-thead tr th{
-  padding: 15px 40px !important;
   color: #385BE8 !important;
 }
 

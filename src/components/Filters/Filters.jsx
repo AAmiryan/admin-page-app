@@ -6,31 +6,47 @@ import "./Filters.css";
 
 const { Option } = Select;
 
-const mockVal = (str, repeat = 1) => ({
-  value: str.repeat(repeat),
-});
-const Filters = () => {
+const Filters = ({ tableData, setTableData, data }) => {
   const [value, setValue] = useState("");
   const [options, setOptions] = useState([]);
+  const [filteredTableData, setFilteredTableData] = useState([]);
 
   let path = window.location.pathname;
 
-  const onSearch = (searchText) => {
-    console.log("on search");
-    setOptions(
-      !searchText
-        ? []
-        : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)]
-    );
+  const onAutoCompleteSearch = (searchText) => {
+    const filteredData = data?.filter((item) => {
+      return item.name.toLowerCase().includes(value.toLowerCase());
+    });
+
+    setFilteredTableData(filteredData);
+    const optionsText = filteredData?.map((option) => ({
+      value: option.name.toLowerCase(),
+      key: option.id,
+    }));
+    setOptions(optionsText);
+    if (searchText.length === 0) {
+      setTableData({ isLoading: false, data: data, onError: null });
+    }
   };
 
-  const onSelect = (data) => {
-    console.log("onSelect", data);
+  const onAutoCompleteSelect = () => {
+    setTableData({ isLoading: false, data: filteredTableData, onError: null });
   };
 
-  const onChange = (data) => {
-    console.log("change");
-    setValue(data);
+  const onAutoCompleteChange = (searchValue) => {
+    setValue(searchValue);
+    // const filteredData = data?.filter((item) => {
+    //   return item.name.toLowerCase().includes(value.toLowerCase());
+    // });
+
+    // setFilteredTableData(filteredData);
+    // const optionsText = filteredData?.map((option) => ({
+    //   value: option.name.toLowerCase(),
+    //   key: option.id,
+    // }));
+    // setOptions(optionsText);
+    // console.log("optionsText", optionsText);
+    // console.log("filteredData", filteredData);
   };
 
   const handleSelectChange = (e) => {
@@ -39,8 +55,7 @@ const Filters = () => {
 
   const handleNodesSearch = () => {
     console.log("handleNodesSearch");
-  }
-
+  };
 
   return (
     <div className="filterContainer">
@@ -51,9 +66,9 @@ const Filters = () => {
           style={{
             width: 300,
           }}
-          onSelect={onSelect}
-          onSearch={onSearch}
-          onChange={onChange}
+          onSelect={onAutoCompleteSelect}
+          onSearch={onAutoCompleteSearch}
+          onChange={onAutoCompleteChange}
           dropdownClassName="filtersAutocomplete"
           placeholder="Search"
           className="filtersAutoComplete"

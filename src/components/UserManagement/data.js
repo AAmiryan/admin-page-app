@@ -2,6 +2,13 @@ import { Popover, Switch } from "antd";
 import MultipointSvg from "../../svgComponents/Multipoint";
 import AdminIcon from "../../svgComponents/AdminIcon";
 
+const content = (
+  <div>
+    <p>View</p>
+    <p>Remove</p>
+  </div>
+);
+
 export const columns = (
   userData,
   visible,
@@ -24,7 +31,6 @@ export const columns = (
   {
     title: "Member Since",
     dataIndex: "member",
-    
   },
   {
     title: "Last Log in",
@@ -62,17 +68,16 @@ export const columns = (
     title: "",
     render: (_, record) => {
       return (
-      <Popover
-        content={<span onClick={hide}>Close</span>}
-        title="Title"
-        trigger="click"
-        visible={visible}
-        onVisibleChange={handleVisibleChange}
-      >
-        <div onClick={() => console.log("User Management")}>
-          <MultipointSvg />
-        </div>
-      </Popover>
-    )},
+        <Popover
+          content={content}
+          title={false}
+          trigger="click"
+        >
+          <div>
+            <MultipointSvg />
+          </div>
+        </Popover>
+      );
+    },
   },
 ];

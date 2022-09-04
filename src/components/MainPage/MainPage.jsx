@@ -6,16 +6,16 @@ const MainPage = () => {
   return (
     <div className="mainContainer">
       <div className="menuBlock">
-        <p className="adminPage">Admin page</p>
-        <Link to="/" className="link" >
+        <div className="adminPageContainer">
+          <p className="adminPage">Admin page</p>
+        </div>
+        <Link to="/" className="link">
           Dashboard
         </Link>
         <Link to="/user-management">UserManagement</Link>
         <Link to="/graph-directory">GraphDirectory</Link>
         <Link to="/graph-analytics">GraphAnalytics</Link>
       </div>
-
-      {/* <Menu /> */}
     </div>
   );
 };

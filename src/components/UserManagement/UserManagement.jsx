@@ -9,13 +9,25 @@ import ModalComponent from "../ModalComponent.jsx/Modal";
 import DeleteModal from "../ModalComponent.jsx/DeleteModal";
 
 import "./UserManagement.css";
+import { useEffect } from "react";
 
 const UserManagement = () => {
   const [visible, setVisible] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+  const [userData, setUserData] = useState({
+    isLoading: false,
+    data: null,
+    onError: null,
+  });
 
-  const { data } = useFetch("/user.json");
+  const { data } = useFetch("/user.json", userData, setUserData);
+
+  useEffect(() => {
+    setUserData({
+      
+    })
+  }, [])
 
   const hide = () => {
     setVisible(false);
@@ -49,7 +61,7 @@ const UserManagement = () => {
         </div>
       </div>
       <div className="managementFilter">
-        <Filters />
+        <Filters tableData={userData} setTableData={setUserData} data={data}/>
       </div>
       <div className="managementTable">
         <TableComponent
